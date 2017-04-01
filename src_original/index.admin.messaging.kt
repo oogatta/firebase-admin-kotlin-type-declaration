@@ -17,13 +17,13 @@ import org.w3c.performance.*
 import org.w3c.workers.*
 import org.w3c.xhr.*
 
-external interface DataMessagePayload {
+external interface `T$2` {
     @nativeGetter
     operator fun get(key: String): String?
     @nativeSetter
     operator fun set(key: String, value: String)
 }
-external interface NotificationMessagePayload {
+external interface `T$3` {
     var tag: String? get() = definedExternally; set(value) = definedExternally
     var body: String? get() = definedExternally; set(value) = definedExternally
     var icon: String? get() = definedExternally; set(value) = definedExternally
@@ -41,11 +41,11 @@ external interface NotificationMessagePayload {
     @nativeSetter
     operator fun set(key: String, value: String?)
 }
-external interface MessagingPayload {
+external interface `T$4` {
     var data: admin.messaging.DataMessagePayload? get() = definedExternally; set(value) = definedExternally
     var notification: admin.messaging.NotificationMessagePayload? get() = definedExternally; set(value) = definedExternally
 }
-external interface MessagingOptions {
+external interface `T$5` {
     var dryRun: Boolean? get() = definedExternally; set(value) = definedExternally
     var priority: String? get() = definedExternally; set(value) = definedExternally
     var timeToLive: Number? get() = definedExternally; set(value) = definedExternally
@@ -58,27 +58,27 @@ external interface MessagingOptions {
     @nativeSetter
     operator fun set(key: String, value: Any?)
 }
-external interface MessagingDeviceResult {
+external interface `T$6` {
     var error: admin.FirebaseError? get() = definedExternally; set(value) = definedExternally
     var messageId: String? get() = definedExternally; set(value) = definedExternally
     var canonicalRegistrationToken: String? get() = definedExternally; set(value) = definedExternally
 }
-external interface MessagingDevicesResponse {
+external interface `T$7` {
     var canonicalRegistrationTokenCount: Number
     var failureCount: Number
     var multicastId: Number
     var results: Array<admin.messaging.MessagingDeviceResult>
     var successCount: Number
 }
-external interface MessagingDeviceGroupResponse {
+external interface `T$8` {
     var successCount: Number
     var failureCount: Number
     var failedRegistrationTokens: Array<String>
 }
-external interface MessagingTopicResponse {
+external interface `T$9` {
     var messageId: Number
 }
-external interface MessagingConditionResponse {
+external interface `T$10` {
     var messageId: Number
 }
 external interface Messaging {

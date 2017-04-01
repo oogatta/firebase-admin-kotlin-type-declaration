@@ -60,9 +60,9 @@ external interface Query {
     fun isEqual(other: admin.database.Query?): Boolean
     fun limitToFirst(limit: Number): admin.database.Query
     fun limitToLast(limit: Number): admin.database.Query
-    fun off(eventType: String? = definedExternally /* null */, callback: ((a: admin.database.DataSnapshot, b: String? /*= null*/) -> Any)? = definedExternally /* null */, context: Any? = definedExternally /* null */)
-    fun on(eventType: String, callback: (a: admin.database.DataSnapshot?, b: String? /*= null*/) -> Any, cancelCallbackOrContext: Any? = definedExternally /* null */, context: Any? = definedExternally /* null */): (a: admin.database.DataSnapshot?, b: String? /*= null*/) -> Any
-    fun once(eventType: String, successCallback: ((a: admin.database.DataSnapshot, b: String? /*= null*/) -> Any)? = definedExternally /* null */, failureCallbackOrContext: Any? = definedExternally /* null */, context: Any? = definedExternally /* null */): Promise<Any>
+    fun off(eventType: admin.database.EventType? = definedExternally /* null */, callback: ((a: admin.database.DataSnapshot, b: String? /*= null*/) -> Any)? = definedExternally /* null */, context: Any? = definedExternally /* null */)
+    fun on(eventType: admin.database.EventType, callback: (a: admin.database.DataSnapshot?, b: String? /*= null*/) -> Any, cancelCallbackOrContext: Any? = definedExternally /* null */, context: Any? = definedExternally /* null */): (a: admin.database.DataSnapshot?, b: String? /*= null*/) -> Any
+    fun once(eventType: admin.database.EventType, successCallback: ((a: admin.database.DataSnapshot, b: String? /*= null*/) -> Any)? = definedExternally /* null */, failureCallbackOrContext: Any? = definedExternally /* null */, context: Any? = definedExternally /* null */): Promise<Any>
     fun orderByChild(path: String): admin.database.Query
     fun orderByKey(): admin.database.Query
     fun orderByPriority(): admin.database.Query
