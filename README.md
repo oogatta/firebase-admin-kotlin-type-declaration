@@ -15,6 +15,6 @@ $ gradle jar
 ```gradle
 dependencies {
     testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
-    testCompile files("typings/firebase-admin-kotlin-type-declaration.jar")
+    compileOnly files("typings/firebase-admin-kotlin-type-declaration.jar")
 }
 ```
