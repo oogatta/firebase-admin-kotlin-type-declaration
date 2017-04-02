@@ -1,5 +1,5 @@
 @file:Suppress("INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS")
-@file:JsQualifier("admin.database")
+@file:[JsQualifier("database") JsModule("firebase-admin")]
 package admin.database
 
 import kotlin.js.*
